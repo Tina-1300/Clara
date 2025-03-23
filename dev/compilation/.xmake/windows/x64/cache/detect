@@ -1,0 +1,79 @@
+{
+    find_program_mingw_arch_x64_plat_windows_checktoolcxx = {
+        ["x86_64-w64-mingw32-g++"] = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]]
+    },
+    find_program_mingw_arch_x64_plat_windows_checktoolld = {
+        ["x86_64-w64-mingw32-g++"] = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]]
+    },
+    find_program = {
+        ["vswhere.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe]],
+        nim = false,
+        ["C:\\mingw64\\bin\\x86_64-w64-mingw32-g++"] = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]],
+        clang = "clang"
+    },
+    find_program_mingw_arch_x64_plat_windows_checktoolcc = {
+        ["x86_64-w64-mingw32-gcc"] = [[C:\mingw64\bin\x86_64-w64-mingw32-gcc]]
+    },
+    ["lib.detect.has_flags"] = {
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxxflags__-Os"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxflags__-fvisibility-inlines-hidden"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx___-O3"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxflags__-fdiagnostics-color=always"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxflags__-Wno-gnu-line-marker -Werror"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxxflags__-O2"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxflags__-std=c++20"] = true,
+        ["windows_x64_C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0_cxx_cxflags__-MMD -MF"] = true
+    },
+    find_program_mingw_arch_x64_plat_windows_checktoolsh = {
+        ["x86_64-w64-mingw32-g++"] = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]]
+    },
+    find_programver = {
+        ["C:\\mingw64\\bin\\x86_64-w64-mingw32-g++"] = "14.2.0"
+    },
+    ["detect.sdks.find_mingw"] = {
+        mingw = {
+            cross = "x86_64-w64-mingw32-",
+            bindir = [[C:\mingw64\bin]],
+            sdkdir = [[C:\mingw64]]
+        }
+    },
+    find_program_mingw_arch_x64_plat_windows_checktoolar = {
+        ["C:\\mingw64\\bin\\ar"] = [[C:\mingw64\bin\ar]]
+    },
+    ["detect.tools.gcc.has_cflags"] = {
+        ["C:\\mingw64\\bin\\x86_64-w64-mingw32-g++_14.2.0"] = {
+            ["-print-multiarch"] = true,
+            ["-o"] = true,
+            ["-print-sysroot"] = true,
+            ["--version"] = true,
+            ["-pie"] = true,
+            ["-Xpreprocessor"] = true,
+            ["-print-multi-os-directory"] = true,
+            ["-shared"] = true,
+            ["-time"] = true,
+            ["-pass-exit-codes"] = true,
+            ["-Xassembler"] = true,
+            ["-dumpmachine"] = true,
+            ["-dumpversion"] = true,
+            ["--help"] = true,
+            ["-Xlinker"] = true,
+            ["-pipe"] = true,
+            ["-no-canonical-prefixes"] = true,
+            ["-print-search-dirs"] = true,
+            ["-print-multi-lib"] = true,
+            ["-S"] = true,
+            ["--param"] = true,
+            ["-print-multi-directory"] = true,
+            ["-save-temps"] = true,
+            ["-c"] = true,
+            ["-E"] = true,
+            ["-print-sysroot-headers-suffix"] = true,
+            ["--target-help"] = true,
+            ["-print-libgcc-file-name"] = true,
+            ["-B"] = true,
+            ["-v"] = true,
+            ["-dumpspecs"] = true,
+            ["-x"] = true
+        }
+    }
+}

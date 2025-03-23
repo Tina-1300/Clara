@@ -1,0 +1,150 @@
+{
+    nim_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = false,
+        __global = true,
+        plat = "windows"
+    },
+    tool_target_Clara_windows_x64_cxx = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]],
+        toolname = "gxx"
+    },
+    swift_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    tool_target_test_clara_windows_x64_ld = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]],
+        toolname = "gxx"
+    },
+    tool_target_test_clara_windows_x64_sh = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]],
+        toolname = "gxx"
+    },
+    tool_target_test_clara_windows_x64_cxx = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-g++]],
+        toolname = "gxx"
+    },
+    yasm_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    clang_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = {
+            name = "clang",
+            program = "clang"
+        },
+        __global = true,
+        plat = "windows"
+    },
+    cuda_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    tool_target_Clara_windows_x64_ar = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\ar]],
+        toolname = "ar"
+    },
+    tool_target_Clara_windows_x64_cc = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-gcc]],
+        toolname = "gcc"
+    },
+    tool_target_test_clara_windows_x64_cc = {
+        toolchain_info = {
+            arch = "x64",
+            name = "mingw",
+            cachekey = "mingw_arch_x64_plat_windows",
+            plat = "windows"
+        },
+        program = [[C:\mingw64\bin\x86_64-w64-mingw32-gcc]],
+        toolname = "gcc"
+    },
+    go_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    rust_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    msvc_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = false,
+        __global = true,
+        plat = "windows"
+    },
+    mingw_arch_x64_plat_windows = {
+        arch = "x64",
+        __global = true,
+        mingw = [[C:\mingw64]],
+        plat = "windows",
+        __checked = true,
+        bindir = [[C:\mingw64\bin]],
+        cross = "x86_64-w64-mingw32-"
+    },
+    fpc_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    nasm_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    },
+    gfortran_arch_x64_plat_windows = {
+        arch = "x64",
+        __checked = true,
+        __global = true,
+        plat = "windows"
+    }
+}
