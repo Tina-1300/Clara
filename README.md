@@ -2,3 +2,5 @@
 Clara is an open-source C++ library that simplifies command-line argument management. It offers an easy interface for parsing and handling inputs, allowing developers to focus on application logic instead of argument parsing details.
 
 ![logo of library](./Logo.jpeg)
+
+To access the Clara library installation documentation, please click on the link below : [installation.md](./doc/installation.md)
