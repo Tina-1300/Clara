@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Clara/Clara.hpp"
 
+#include <any>
+
 // g++ -Os -s -o test.exe test.cpp -lClara & color
 
 int main(int argc, char *argv[]){
@@ -9,7 +11,9 @@ int main(int argc, char *argv[]){
     Clara::CommandLineArgs clara(argc, argv);
 
     if(clara.hasOption("--ip") == true){
-        std::string ipValue = clara.getOptionValue("--ip");
+        std::any ipValue;
+        std::string(ipValue) = clara.getOptionValue("--ip");
+
         std::cout << "IP address : " << ipValue << "\n";
     }
 

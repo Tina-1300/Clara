@@ -12,7 +12,7 @@ namespace Clara{
     void ArgumentParser::parse(){
         for (size_t i = 1; i < args.size(); ++i){
             const std::string& arg = args[i];
-            // vérifier si il ya à le symbole - pour indiquer le nom de paramètre ou --
+            // vérifier si il y à le symbole - pour indiquer le nom de paramètre ou --
             if (arg.substr(0, 1) == "-"){ 
                 std::string option = arg;
                 std::string value = "";
@@ -29,13 +29,21 @@ namespace Clara{
         return options.find(option) != options.end();
     };
 
-    std::string ArgumentParser::getOptionValue(const std::string& option) const{
+
+    // corriger error des types 
+    // on doit pouvoire parser les valeur passé aux paramètre de n'importe quelle type que ce 
+    // soit int, bool, ect...
+    
+    template <typename T>
+    T ArgumentParser::getOptionValue(const std::string& option) const{
         auto it = options.find(option);
         if (it != options.end()){
             return it->second;
         }
-        return "";
+        //return "";   
     };
+
+
 
     size_t ArgumentParser::size() const{
         return args.size();
@@ -48,7 +56,7 @@ namespace Clara{
         return "";
     };
     
-    std::unordered_map<std::string, std::string> ArgumentParser::getOptions() const{
+    std::unordered_map<std::string, std::any> ArgumentParser::getOptions() const{
         return options;
     };
 

@@ -10,7 +10,8 @@ namespace Clara{
         return parser.hasOption(option);
     }
 
-    std::string CommandLineArgs::getOptionValue(const std::string& option) const{
+    template <typename T>
+    T CommandLineArgs::getOptionValue(const std::string& option) const{
         return parser.getOptionValue(option);
     };
 

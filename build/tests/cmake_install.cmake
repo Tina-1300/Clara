@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/alexp/OneDrive/Bureau/Library/C++/Clara/tests
+# Install script for directory: C:/Users/alexp/OneDrive/Bureau/Library/Clara/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/Library/C++/Clara/build/Clara")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -11,7 +11,10 @@ namespace Clara{
         CommandLineArgs(int argc, char* argv[]);
         
         bool hasOption(const std::string& option) const;
-        std::string getOptionValue(const std::string& option) const;
+
+        template <typename T>
+        T getOptionValue(const std::string& option) const;
+        
         void printArgs() const;
         void printOptions() const;
 
