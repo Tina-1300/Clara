@@ -1,0 +1,6 @@
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/include/Clara/ArgumentParser.hpp
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/include/Clara/ArgumentPrinter.hpp
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/include/Clara/Clara.hpp
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/include/Clara/CommandLineArgs.hpp
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/include/Clara/interfaces/IArgumentParser.hpp
+C:/Users/alexp/OneDrive/Bureau/Library/Clara/build/Clara/lib/libClara.a

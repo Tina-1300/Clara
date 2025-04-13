@@ -1,5 +1,5 @@
 #include "../../include/Clara/ArgumentParser.hpp"
-
+#include <stdexcept>
 
 namespace Clara{
     
@@ -15,7 +15,8 @@ namespace Clara{
             // vérifier si il y à le symbole - pour indiquer le nom de paramètre ou --
             if (arg.substr(0, 1) == "-"){ 
                 std::string option = arg;
-                std::string value = "";
+                //std::string value = "";
+                std::any value;
                 if (i + 1 < args.size() && args[i + 1].substr(0, 1) != "-"){
                     value = args[i + 1];
                     ++i;
@@ -35,13 +36,35 @@ namespace Clara{
     // soit int, bool, ect...
     
     template <typename T>
-    T ArgumentParser::getOptionValue(const std::string& option) const{
+    T ArgumentParser::getOptionValue(const std::string& option) const {
         auto it = options.find(option);
-        if (it != options.end()){
-            return it->second;
+        if (it == options.end()){
+            throw std::invalid_argument("Option non trouver : " + option);
         }
-        //return "";   
-    };
+    
+        const std::any& value = it->second;
+    
+        if constexpr (std::is_same<T, std::string>::value){
+            return std::any_cast<std::string>(value);
+        }
+        
+        else if constexpr (std::is_same<T, int>::value){
+            return std::stoi(std::any_cast<std::string>(value));
+        }
+        
+        else if constexpr (std::is_same<T, size_t>::value){
+            return static_cast<size_t>(std::stoull(std::any_cast<std::string>(value)));
+        }
+        
+        else if constexpr (std::is_same<T, bool>::value){
+            std::string val = std::any_cast<std::string>(value);
+            return val == "1" || val == "0" || val == "true" || val == "True";
+        }
+        
+        else{
+            throw std::invalid_argument("Mauvais type pour l'option : " + option);
+        }
+    }
 
 
 
@@ -59,5 +82,10 @@ namespace Clara{
     std::unordered_map<std::string, std::any> ArgumentParser::getOptions() const{
         return options;
     };
+
+    template std::string ArgumentParser::getOptionValue<std::string>(const std::string& option) const;
+    template int ArgumentParser::getOptionValue<int>(const std::string& option) const;
+    template bool ArgumentParser::getOptionValue<bool>(const std::string& option) const;
+    template size_t ArgumentParser::getOptionValue<size_t>(const std::string& option) const;
 
 };
