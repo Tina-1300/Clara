@@ -1,7 +1,7 @@
 # ninja log v6
-47	2660	7662634024239180	CMakeFiles/Clara.dir/src/Clara/CommandLineArgs.cpp.obj	e2da799170a36ca7
-64	3438	7662634024395395	tests/CMakeFiles/tests.dir/test_clara.cpp.obj	200691d5fe1edcb6
-41	3675	7662634024082979	CMakeFiles/Clara.dir/src/Clara/ArgumentPrinter.cpp.obj	3ec88032f3e5f7ac
-8	4327	7662634023770539	CMakeFiles/Clara.dir/src/Clara/ArgumentParser.cpp.obj	42fcc7751f938f5
-4328	4540	7662634067030913	libClara.a	6e32cc8af33dd239
-4540	5951	7662634069197133	tests/tests.exe	e820edc83d9cc4bc
+41	2535	7662743795753951	CMakeFiles/Clara.dir/src/Clara/CommandLineArgs.cpp.obj	e2da799170a36ca7
+45	2931	7662743795910156	tests/CMakeFiles/tests.dir/test_clara.cpp.obj	200691d5fe1edcb6
+36	3187	7662743795753951	CMakeFiles/Clara.dir/src/Clara/ArgumentPrinter.cpp.obj	3ec88032f3e5f7ac
+8	3905	7662743795441514	CMakeFiles/Clara.dir/src/Clara/ArgumentParser.cpp.obj	42fcc7751f938f5
+3905	4127	7662743834486425	libClara.a	6e32cc8af33dd239
+4127	4371	7662743836653368	tests/tests.exe	e820edc83d9cc4bc

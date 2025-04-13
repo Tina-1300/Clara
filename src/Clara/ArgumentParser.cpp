@@ -26,7 +26,7 @@ namespace Clara{
         }
     };
 
-    bool ArgumentParser::hasOption(const std::string& option) const{
+    bool ArgumentParser::has_param(const std::string& option) const{
         return options.find(option) != options.end();
     };
 
@@ -36,7 +36,7 @@ namespace Clara{
     // soit int, bool, ect...
     
     template <typename T>
-    T ArgumentParser::getOptionValue(const std::string& option) const {
+    T ArgumentParser::get_value_param(const std::string& option) const {
         auto it = options.find(option);
         if (it == options.end()){
             throw std::invalid_argument("Option non trouver : " + option);
@@ -66,6 +66,17 @@ namespace Clara{
         }
     }
 
+    void ArgumentParser::set_param(Param& param) const {
+        if(param.required == true){
+            if(!has_param(param.option)){
+                throw std::invalid_argument("param not found : " + param.option); 
+            }
+        }else{
+            if(!has_param(param.option)){
+
+            }
+        }
+    };
 
 
     size_t ArgumentParser::size() const{
@@ -83,9 +94,9 @@ namespace Clara{
         return options;
     };
 
-    template std::string ArgumentParser::getOptionValue<std::string>(const std::string& option) const;
-    template int ArgumentParser::getOptionValue<int>(const std::string& option) const;
-    template bool ArgumentParser::getOptionValue<bool>(const std::string& option) const;
-    template size_t ArgumentParser::getOptionValue<size_t>(const std::string& option) const;
+    template std::string ArgumentParser::get_value_param<std::string>(const std::string& option) const;
+    template int ArgumentParser::get_value_param<int>(const std::string& option) const;
+    template bool ArgumentParser::get_value_param<bool>(const std::string& option) const;
+    template size_t ArgumentParser::get_value_param<size_t>(const std::string& option) const;
 
 };

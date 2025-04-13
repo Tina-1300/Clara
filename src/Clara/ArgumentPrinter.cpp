@@ -18,15 +18,28 @@ namespace Clara{
     void ArgumentPrinter::printOptions() const{
         for (const auto& option : parser.getOptions()){
             std::cout << "Option " << option.first << " : ";
+            
             if(option.second.type() == typeid(int)){
                 std::cout << std::any_cast<int>(option.second);
-            }else if (option.second.type() == typeid(std::string)){
+            }
+            
+            else if (option.second.type() == typeid(std::string)){
                 std::cout << std::any_cast<std::string>(option.second);
-            }else if (option.second.type() == typeid(bool)){
+            }
+            
+            else if (option.second.type() == typeid(bool)){
                 std::cout << (std::any_cast<bool>(option.second) ? "true" : "false");
-            }else{
+            }
+
+            else if(option.second.type() == typeid(size_t)){
+                std::cout << std::any_cast<size_t>(option.second);
+            }
+
+            
+            else{
                 std::cout << "Type inconnu";
             }
+
             std::cout << "\n";
         }
     };

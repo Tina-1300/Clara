@@ -10,11 +10,13 @@ namespace Clara{
     public:
         ArgumentParser(int argc, char* argv[]);
         void parse() override;
-        bool hasOption(const std::string& option) const override;
+        bool has_param(const std::string& option) const override;
 
         template <typename T>
-        T getOptionValue(const std::string& option) const;
+        T get_value_param(const std::string& option) const;
         
+        void set_param(Param& param) const override;
+
         size_t size() const override;
         std::string getArg(size_t index) const override;
 

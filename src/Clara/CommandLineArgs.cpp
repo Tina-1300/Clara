@@ -6,11 +6,13 @@ namespace Clara{
         parser.parse();
     };
 
-    bool CommandLineArgs::hasOption(const std::string& option) const{
-        return parser.hasOption(option);
+    bool CommandLineArgs::has_param(const std::string& option) const{
+        return parser.has_param(option);
     }
 
-
+    void CommandLineArgs::set_param(Param& param) const{
+        parser.set_param(param);
+    }
 
     void CommandLineArgs::printArgs() const{
         printer.printArgs();
